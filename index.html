@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ostap Lernatovych - Resume</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .star-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .timeline {
+      width: 90%;
+      margin: 0 auto;
+      padding: 30px;
+      position: relative;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .timeline-item.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 25px;
+      width: 2px;
+      height: 100%;
+      background-color: #333;
+      z-index: 0;
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .timeline-item:first-child::after {
+      display: none;
+    }
+
+    .timeline-item:first-child::before {
+      display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 30px;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .star:nth-child(2n) {
+      width: 3px;
+      height: 3px;
+    }
+
+    .star:nth-child(3n) {
+      width: 1px;
+      height: 1px;
+      animation-delay: 0.5s;
+    }
+
+    .star:nth-child(4n) {
+      width: 2.5px;
+      height: 2.5px;
+      animation-delay: 1s;
+    }
+
+    @keyframes moveStars {
+      from {
+        transform: translateY(-100vh);
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .star {
+      animation: moveStars 20s linear infinite;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .timeline {
+        width: 100%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      .navbar {
+        justify-content: space-around;
+      }
+
+      .navbar a {
+        padding: 10px;
+        margin: 0 5px;
+      }
+    }
+
+    /* Make all hyperlinks white */
+    a {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#websites">Websites</a>
+  </div>
+
+  <div class="star-container"></div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h1>Ostap Lernatovych</h1>
+      <h2>Results-Oriented Tech Leader</h2>
+      <h2>10+ Years Building Products, Driving Growth</h2>
+      <p><a href="mailto:ostaplernatovych@gmail.com">ostaplernatovych@gmail.com</a> | 412-961-3120 | <a
+          href="https://www.linkedin.com/in/ost4p/" target="_blank">linkedin.com/in/ost4p/</a></p>
+    </div>
+
+    <div class="timeline-item" id="experience">
+      <h3>PROFESSIONAL EXPERIENCE</h3>
+      <h4>Technology Product Manager</h4>
+      <p>BNY Mellon, Pittsburgh, PA | Feb 2022 - Current</p>
+      <ul>
+        <li>Drove cross-functional teams to deliver 5 complex integrations and APIs using Agile methodologies,
+          resulting in 25% efficiency gains and $1.2 million in cost savings.</li>
+        <li>Architected and executed product roadmaps aligned with business objectives, increasing revenue by 15%
+          and enhancing customer satisfaction by 20%.</li>
+        <li>Mitigated project risks through proactive issue management, preventing potential losses.</li>
+        <li>Streamlined project management using Jira and Confluence, improving team collaboration by 30% and
+          enhancing project visibility.</li>
+        <li>Implemented Scrum frameworks to optimize product development, accelerating time-to-market by 20% and
+          improving product quality by 15%.</li>
+        <li>Managed product backlogs and prioritized features to align with business objectives and customer
+          needs.</li>
+      </ul>
+
+      <h4>Software Engineer</h4>
+      <p>Thermo Fisher Scientific, Pittsburgh, PA | May 2017 - Feb 2022</p>
+      <ul>
+        <li>Developed and optimized high-performance Java, SQL, and JavaScript applications to enhance operational
+          efficiency by 25%.</li>
+        <li>Led a 10-person Agile team to deliver complex software solutions.</li>
+        <li>Engineered innovative solutions to address critical security vulnerabilities, protecting sensitive
+          data and ensuring system integrity.</li>
+        <li>Improved user experience by 20% through data-driven code optimizations, resulting in increased user
+          satisfaction and productivity.</li>
+        <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions. Implemented
+          strategies to drive customer acquisition and retention.</li>
+      </ul>
+
+      <h4>IT Project Manager</h4>
+      <p>Thermo Fisher Scientific, Pittsburgh, PA | Aug 2016 - May 2017</p>
+      <ul>
+        <li>Drove revenue generation through successful EDI and electronic commerce supplier onboarding,
+          generating millions in revenue.</li>
+        <li>Managed end-to-end software development lifecycle, from concept to deployment, optimizing efficiency
+          and time-to-market.</li>
+        <li>Orchestrated complex code releases and API integrations across multiple IT teams, ensuring seamless
+          system operations.</li>
+        <li>Delivered B2B electronic commerce solutions through in-depth research, configuration, and
+          documentation, resulting in 20% growth.</li>
+        <li>Provided expert guidance to end-users through effective presentations and training, enhancing user
+          adoption and satisfaction.</li>
+      </ul>
+
+      <h4>IT Project Manager</h4>
+      <p>Guilty Soles, Pittsburgh, PA | May 2016 - Aug 2016</p>
+      <ul>
+        <li>Managed agile development processes to deliver weekly production builds, supporting rapid product
+          iterations.</li>
+        <li>Optimized website performance by implementing caching and compression technologies, resulting in a
+          40% increase in website speed.</li>
+        <li>Accelerated startup growth by 80% month-over-month through innovative marketing strategies including
+          growth hacking, influencer outreach, and SEO/SEM.</li>
+      </ul>
+
+      <h4>Web Developer / Programming Team</h4>
+      <p>The Church Online, Pittsburgh, PA | May 2015 - May 2016</p>
+      <ul>
+        <li>Developed over 30 custom websites and online stores, collaborating with design teams to deliver
+          exceptional client solutions.</li>
+        <li>Engineered automated import tools to streamline website migration processes and improve
+          efficiency.</li>
+        <li>Contributed to the development and enhancement of web systems, optimizing website performance and
+          functionality.</li>
+      </ul>
+
+      <h4>Web Developer Intern</h4>
+      <p>McKula Inc., Norvelt, PA | Sep 2013 - Jul 2014</p>
+      <ul>
+        <li>Developed custom websites, implementing responsive designs and user-friendly functionalities to meet
+          client requirements.</li>
+        <li>Contributed to the development of an incident reporting system and company Facebook page, enhancing
+          internal processes and external brand presence.</li>
+        <li>Enhanced design capabilities through Photoshop projects and the creation of instructional
+          tutorials.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item" id="education">
+      <h3>EDUCATION</h3>
+      <h4>University of Pittsburgh</h4>
+      <p>Major: Information Sciences | GPA: 3.4 (with honors) | School of Computing and Information (Department of
+        Computer Science) | 2016</p>
+    </div>
+
+    <div class="timeline-item" id="skills">
+      <h3>TECHNICAL SKILLS</h3>
+      <p><strong>Product Management:</strong> SAFe 5 Practitioner Certified</p>
+      <p><strong>Programming Languages:</strong> Java, JavaScript, SQL, HTML5, CSS3, PHP, JSON, AJAX</p>
+      <p><strong>Development Tools:</strong> Git, JIRA, Outsystems, Low-code platforms, Power BI</p>
+    </div>
+
+    <div class="timeline-item" id="websites">
+      <h3>WEBSITES CREATED</h3>
+      <p><a href="https://bergdentaldmd.com/" target="_blank">bergdentaldmd.com</a></p>
+      <p><a href="https://pitamyshawarma.com/" target="_blank">pitamyshawarma.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    const starContainer = document.querySelector('.star-container');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function createStars() {
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        starContainer.appendChild(star);
+      }
+    }
+
+    function showItems() {
+      timelineItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (itemTop < windowHeight * 0.8) {
+          item.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showItems);
+    showItems();
+    createStars();
+  </script>
+</body>
+
+</html>
