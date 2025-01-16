@@ -6,7 +6,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"> 
   <title>Ostap Lernatovych</title>
   <style>
-    
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin: 0;
@@ -243,43 +242,10 @@
    
     .timeline-item img { 
     display: block;
-    margin: 60px auto 0 auto; /* Add margin-top: 40px */
+    margin: 40px auto 0 auto; /* Add margin-top: 40px */
     width: 150px;
     height: 150px;
   }
-
-
-    /* hover over nmae*/
-    /* Add this CSS code */
-#full-name {
-  position: relative;
-  display: inline-block;
-}
-
-#full-name:hover .particle {
-  animation: particle-effect 1s forwards;
-}
-
-@keyframes particle-effect {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-}
-
-.particle {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-}
   </style>
 </head>
 
@@ -297,7 +263,7 @@
   <div class="timeline">
     <div class="timeline-item">
       <img src="https://media.licdn.com/dms/image/v2/C4E03AQFU5ymtpqPirw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516831667713?e=1740009600&v=beta&t=HHlO6NBVbx0YV6DEdNAPXkAWart4839UsZ9e9sifFzI" alt="Ostap Lernatovych"> 
-      <h1 id="full-name">Ostap Lernatovych</h1>
+      <h1>Ostap Lernatovych</h1>
       <h2>Results-Oriented Tech Leader</h2>
       <h2>10+ Years Building Products, Driving Growth</h2>
       <p><a href="https://www.linkedin.com/in/ost4p/" target="_blank">linkedin.com/in/ost4p/</a></p>
@@ -429,20 +395,7 @@
   </div>
 
   <script>
-
-    // Add this JavaScript code
-const fullName = document.getElementById('full-name');
-fullName.addEventListener('mouseover', () => {
-  for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.top = '50%';
-    fullName.appendChild(particle);
-    particle.addEventListener('animationend', () => particle.remove());
-  }
-});
-    
+  
       const starContainer = document.querySelector('.star-container');
     const timelineItems = document.querySelectorAll('.timeline-item');
     function createStars() {
