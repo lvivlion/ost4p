@@ -454,7 +454,21 @@
 }
 </script>
 
+  <script>
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    function showItems() {
+      timelineItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
+        if (itemTop < windowHeight * 0.8) {
+          item.classList.add('show');
+        }
+      });
+    }
+    window.addEventListener('scroll', showItems);
+    showItems();
+  </script>
   
 </body>
 </html>
