@@ -87,11 +87,10 @@
           100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
         }
         .halo-glow {
-          animation: halo-glow 4s ease-in-out infinite;
+            animation: halo-glow 4s ease-in-out infinite;
         }
     </style>
 </head>
-<!-- CORRECTED: Added Tailwind classes directly to the body tag -->
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
     <!-- The particle canvas is now at the top level to act as a global background -->
     <div id="particles-js"></div>
@@ -103,11 +102,14 @@
                 <div class="flex-shrink-0">
                     <a href="#" id="header-name" class="text-2xl font-bold text-gray-800 dark:text-gray-100">Ostap Lernatovych</a>
                 </div>
+                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#experience" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Experience</a>
                     <a href="#education" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Education</a>
                     <a href="#skills" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
                     <a href="#websites" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
+                    <!-- New Website Services Link -->
+                    <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">OL Website Services</a>
                 </nav>
                 <div class="hidden md:flex items-center space-x-4">
                      <a href="mailto:admin@ost4pp.com" class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
@@ -118,6 +120,7 @@
                         <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
                     </button>
                 </div>
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                      <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
                         <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -135,13 +138,16 @@
                 </div>
             </div>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Experience</a>
                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Education</a>
                 <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Skills</a>
                 <a href="#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Projects</a>
-                 <a href="mailto:ostap@lernatovych.com" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
+                <!-- New Website Services Link for Mobile -->
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">OL Website Services</a>
+                <a href="mailto:ostap@lernatovych.com" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
             </div>
         </div>
     </header>
@@ -210,10 +216,10 @@
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
                            <li>Developed and optimized high-performance Java, SQL, and JavaScript applications to enhance operational efficiency by 25%.</li>
-                           <li>Led a 10-person Agile team to deliver complex software solutions.</li>
-                           <li>Engineered innovative solutions to address critical security vulnerabilities, protecting sensitive data and ensuring system integrity.</li>
-                           <li>Improved user experience by 20% through data-driven code optimizations, resulting in increased user satisfaction and productivity.</li>
-                           <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions. Implemented strategies to drive customer acquisition and retention.</li>
+                            <li>Led a 10-person Agile team to deliver complex software solutions.</li>
+                            <li>Engineered innovative solutions to address critical security vulnerabilities, protecting sensitive data and ensuring system integrity.</li>
+                            <li>Improved user experience by 20% through data-driven code optimizations, resulting in increased user satisfaction and productivity.</li>
+                            <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions. Implemented strategies to drive customer acquisition and retention.</li>
                         </ul>
                     </div>
                 </div>
@@ -256,8 +262,8 @@
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
                            <li>Developed over 30 custom websites and online stores, collaborating with design teams to deliver exceptional client solutions.</li>
-                           <li>Engineered automated import tools to streamline website migration processes and improve efficiency.</li>
-                           <li>Contributed to the development and enhancement of web systems, optimizing website performance and functionality.</li>
+                            <li>Engineered automated import tools to streamline website migration processes and improve efficiency.</li>
+                            <li>Contributed to the development and enhancement of web systems, optimizing website performance and functionality.</li>
                         </ul>
                     </div>
                 </div>
@@ -279,7 +285,6 @@
         </section>
 
         <!-- Education & Skills Section -->
-        <!-- CORRECTED: Restructured sections to ensure H2 headers are inside the containers with background colors -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
             <!-- Education -->
             <div id="education" class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
@@ -379,6 +384,12 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <!-- Added Link -->
+            <div class="text-center mt-16">
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
+                    Need a website? &rarr;
+                </a>
             </div>
         </section>
 
