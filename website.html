@@ -212,6 +212,24 @@
                         <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
                     </div>
                 </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com" alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to feature episodes and connect with a global audience.</p>
+                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius" alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction company to generate leads and showcase their services.</p>
+                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -328,6 +346,30 @@
             }, { threshold: 0.1 });
             sections.forEach(section => { observer.observe(section); });
 
+            // Header name change on scroll
+            const headerName = document.getElementById('header-name');
+            const scrollThreshold = 50;
+            let isFullName = true;
+
+            window.addEventListener('scroll', () => {
+                if (!headerName) return;
+                const showInitials = window.scrollY > scrollThreshold;
+                if (showInitials && isFullName) {
+                    isFullName = false;
+                    headerName.style.opacity = '0';
+                    setTimeout(() => {
+                        headerName.textContent = 'OL Services';
+                        headerName.style.opacity = '1';
+                    }, 400);
+                } else if (!showInitials && !isFullName) {
+                    isFullName = true;
+                    headerName.style.opacity = '0';
+                    setTimeout(() => {
+                        headerName.textContent = 'OL Website Services & Tech Help';
+                        headerName.style.opacity = '1';
+                    }, 400);
+                }
+            }, { passive: true });
         });
     </script>
 </body>
