@@ -82,9 +82,9 @@
             z-index: 1;
         }
         @keyframes halo-glow {
-          0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
-          50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4); }
-          100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
+            0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4); }
+            100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
         }
         .halo-glow {
             animation: halo-glow 4s ease-in-out infinite;
@@ -108,11 +108,11 @@
                     <a href="#education" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Education</a>
                     <a href="#skills" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
                     <a href="#websites" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
-                    <!-- New Website Services Link -->
+                    <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
                     <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">OL Website Services</a>
                 </nav>
                 <div class="hidden md:flex items-center space-x-4">
-                     <a href="mailto:admin@ost4pp.com" class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                     <a href="#contact" class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
                         Contact Me
                     </a>
                     <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -122,7 +122,7 @@
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                     <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
                         <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
                     </button>
@@ -145,9 +145,8 @@
                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Education</a>
                 <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Skills</a>
                 <a href="#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Projects</a>
-                <!-- New Website Services Link for Mobile -->
                 <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">OL Website Services</a>
-                <a href="mailto:ostap@lernatovych.com" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
+                <a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
             </div>
         </div>
     </header>
@@ -393,6 +392,39 @@
             </div>
         </section>
 
+        <!-- NEW Contact Form Section -->
+        <section id="contact" class="fade-in-section mb-24">
+            <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Get In Touch</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="phone" class="sr-only">Phone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="How can I help you?" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit-button" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <p class="text-center text-gray-500 dark:text-gray-400 mt-6">
+                    Or email me at: <a href="mailto:admin@ost4p.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -401,13 +433,18 @@
             <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Let's Connect</h3>
             <p class="mt-2 text-gray-500 dark:text-gray-400">I'm always open to discussing new projects and creative ideas. I also specialize in creating modern, effective websites for small businesses.</p>
             <div class="mt-6">
-                 <a href="mailto:ostap@lernatovych.com" class="halo-glow inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                 <a href="#contact" class="halo-glow inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
                     Get In Touch
                 </a>
             </div>
-            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2024 Ostap Lernatovych. All rights reserved.</p>
+            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2025 Ostap Lernatovych. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
+        <p id="notification-message"></p>
+    </div>
 
     <!-- JSON-LD for SEO -->
     <script type="application/ld+json">
@@ -447,7 +484,7 @@
             function initParticles(isDark) {
                 const config = isDark ? darkParticlesConfig : lightParticlesConfig;
                 const particlesDiv = document.getElementById('particles-js');
-                if (particlesDiv) {
+                if (particlesDiv && window.particlesJS) {
                     particlesJS('particles-js', config);
                 }
             }
@@ -546,6 +583,67 @@
                     }, 400);
                 }
             }, { passive: true });
+
+            // --- CONTACT FORM SCRIPT ---
+            const contactForm = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const notification = document.getElementById('notification');
+            const notificationMessage = document.getElementById('notification-message');
+
+            function showNotification(message, isSuccess) {
+                notificationMessage.textContent = message;
+                notification.classList.remove('bg-green-500', 'bg-red-500');
+                notification.classList.add(isSuccess ? 'bg-green-500' : 'bg-red-500');
+                notification.classList.remove('opacity-0');
+
+                setTimeout(() => {
+                    notification.classList.add('opacity-0');
+                }, 4000);
+            }
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+
+                    const { name, email, phone, message } = event.target.elements;
+
+                    const endpoint = "https://22czkke46wc6m6y4evtkk37g4u0uruvl.lambda-url.us-east-1.on.aws/";
+                    const body = JSON.stringify({
+                        senderName: name.value,
+                        senderEmail: email.value,
+                        senderPhone: phone.value,
+                        message: message.value
+                    });
+
+                    const requestOptions = {
+                        method: "POST",
+                        body
+                    };
+
+                    fetch(endpoint, requestOptions)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Form submission failed.');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            showNotification('Message sent successfully!', true);
+                            contactForm.reset();
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            showNotification('Submission failed. Please try again.', false);
+                        })
+                        .finally(() => {
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Send Message';
+                        });
+                });
+            }
         });
     </script>
 </body>
