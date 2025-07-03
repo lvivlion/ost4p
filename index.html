@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OL Website Services & Tech Help | Pittsburgh</title>
+    <title>Ostap Lernatovych - Technology Product Leader</title>
     <!-- Meta Tags for SEO and Social Sharing -->
-    <meta name="description" content="Professional website design, development, and tech help services in the Pittsburgh Metro area. Over 10 years of experience.">
-    <meta property="og:title" content="OL Website Services & Tech Help">
-    <meta property="og:description" content="Modern websites and reliable tech support for your business. Serving the Pittsburgh Metro area and beyond.">
-    <meta property="og:url" content="https://ost4p.com/website">
-    <meta property="og:image" content="https://ost4p.com/profilepicture.jpg"> <!-- Consider a business logo here -->
+    <meta name="description" content="Results-Oriented Tech Leader with 10+ years of experience building products and driving growth.">
+    <meta property="og:title" content="Ostap Lernatovych - Portfolio">
+    <meta property="og:description" content="Results-Oriented Tech Leader with 10+ years of experience.">
+    <meta property="og:url" content="https://ost4p.com/">
+    <meta property="og:image" content="https://ost4p.com/profilepicture.jpg">
     <meta property="og:type" content="website">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -25,8 +25,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom Styles -->
     <style>
@@ -45,7 +43,7 @@
             bottom: -4px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #2563EB;
+            background-color: #2563EB; /* Replaced @apply bg-blue-600; */
             transition: width 0.3s ease;
         }
         .nav-link:hover::after, .nav-link.active::after {
@@ -75,6 +73,14 @@
             position: relative;
             z-index: 1;
         }
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
         @keyframes halo-glow {
             0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
             50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4); }
@@ -86,6 +92,7 @@
     </style>
 </head>
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <!-- The particle canvas is now at the top level to act as a global background -->
     <div id="particles-js"></div>
 
     <!-- Header & Navigation -->
@@ -93,175 +100,302 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" id="header-name" class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">OL Website Services & Tech Help</a>
+                    <a href="#" id="header-name" class="text-2xl font-bold text-gray-800 dark:text-gray-100">Ostap Lernatovych</a>
                 </div>
+                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Services</a>
-                    <a href="#portfolio" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Portfolio</a>
-                    <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
+                    <a href="#experience" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Experience</a>
+                    <a href="#education" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Education</a>
+                    <a href="#skills" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
+                    <a href="#websites" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
                     <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+                    <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">OL Website Services</a>
                 </nav>
-                <div class="hidden md:flex items-center">
-                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 ml-4">
+                <div class="hidden md:flex items-center space-x-4">
+                     <a href="#contact" class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                        Contact Me
+                    </a>
+                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
                         <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
                     </button>
                 </div>
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
                         <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
                     </button>
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400">
-                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
-                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Portfolio</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Education</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Skills</a>
+                <a href="#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Projects</a>
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">OL Website Services</a>
+                <a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24">
         <!-- Hero Section -->
-        <section class="text-center mb-24 fade-in-section">
-            <div class="py-16 sm:py-24">
+        <section class="hero-section text-center mb-24">
+            <div class="hero-content fade-in-section py-16 sm:py-24">
+                <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-                    Modern Websites & Reliable Tech Help
+                    A Decade of Tech Leadership
                 </h1>
-                <p class="mt-4 max-w-3xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-                    Helping small businesses in the Pittsburgh Metro area and beyond thrive with professional, affordable web and IT solutions.
+                <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400">
+                    Taking products from the initial code all the way to launch.
                 </p>
-                <div class="mt-10">
-                    <a href="#contact" class="halo-glow inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
-                        Get a Free Quote
+                <div class="mt-8 flex justify-center items-center space-x-6">
+                    <a href="https://www.linkedin.com/in/ost4p/" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="mb-24 fade-in-section">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12">Our Services</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-desktop text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Custom Website Design</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Beautiful, responsive websites built from scratch to perfectly match your brand and goals.</p>
+        <!-- Experience Section -->
+        <section id="experience" class="mb-24 fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center sm:text-left">Professional Experience</h2>
+            <div class="space-y-12">
+                 <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Technical Product Specialist and App Delivery II</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">BNY, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">June 2025 - Present</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                            <li>Defining and executing market engineering strategies to enhance application delivery and performance.</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Service Card 2 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-shopping-cart text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">eCommerce Solutions</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Powerful online stores to sell your products and services to a global audience.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Technology Product Manager</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">BNY, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">Feb 2022 - June 2025</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                            <li>Drove cross-functional teams to deliver 5 complex integrations and APIs using Agile methodologies, resulting in 25% efficiency gains and $1.2 million in cost savings.</li>
+                            <li>Architected and executed product roadmaps aligned with business objectives, increasing revenue by 15% and enhancing customer satisfaction by 20%.</li>
+                            <li>Mitigated project risks through proactive issue management, preventing potential losses.</li>
+                            <li>Streamlined project management using Jira and Confluence, improving team collaboration by 30% and enhancing project visibility.</li>
+                            <li>Implemented Scrum frameworks to optimize product development, accelerating time-to-market by 20% and improving product quality by 15%.</li>
+                            <li>Managed product backlogs and prioritized features to align with business objectives and customer needs.</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Service Card 3 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-chart-line text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Local SEO Optimization</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Helping local customers find your business online through targeted search engine optimization.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Software Engineer</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Thermo Fisher Scientific, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">May 2017 - Feb 2022</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                           <li>Developed and optimized high-performance Java, SQL, and JavaScript applications to enhance operational efficiency by 25%.</li>
+                            <li>Led a 10-person Agile team to deliver complex software solutions.</li>
+                            <li>Engineered innovative solutions to address critical security vulnerabilities, protecting sensitive data and ensuring system integrity.</li>
+                            <li>Improved user experience by 20% through data-driven code optimizations, resulting in increased user satisfaction and productivity.</li>
+                            <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions. Implemented strategies to drive customer acquisition and retention.</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Service Card 4 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-headset text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">On-Demand Tech Help</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Fast, reliable technical support for your computers, software, and network issues.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">IT Project Manager</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Thermo Fisher Scientific, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">Aug 2016 - May 2017</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                            <li>Drove revenue generation through successful EDI and electronic commerce supplier onboarding, generating millions in revenue.</li>
+                            <li>Managed end-to-end software development lifecycle, from concept to deployment, optimizing efficiency and time-to-market.</li>
+                            <li>Orchestrated complex code releases and API integrations across multiple IT teams, ensuring seamless system operations.</li>
+                            <li>Delivered B2B electronic commerce solutions through in-depth research, configuration, and documentation, resulting in 20% growth.</li>
+                            <li>Provided expert guidance to end-users through effective presentations and training, enhancing user adoption and satisfaction.</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Service Card 5 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-cogs text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Website Maintenance</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Keeping your website secure, updated, and running smoothly with our maintenance plans.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">IT Project Manager</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Guilty Soles, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">May 2016 - Aug 2016</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                            <li>Managed agile development processes to deliver weekly production builds, supporting rapid product iterations.</li>
+                            <li>Optimized website performance by implementing caching and compression technologies, resulting in a 40% increase in website speed.</li>
+                            <li>Accelerated startup growth by 80% month-over-month through innovative marketing strategies including growth hacking, influencer outreach, and SEO/SEM.</li>
+                        </ul>
+                    </div>
                 </div>
-                 <!-- Service Card 6 -->
-                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
-                    <i class="fas fa-pen-ruler text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Consulting</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Expert advice to help you make the right technology decisions for your business.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Web Developer</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">The Church Online, Pittsburgh, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">May 2015 - May 2016</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                           <li>Developed over 30 custom websites and online stores, collaborating with design teams to deliver exceptional client solutions.</li>
+                            <li>Engineered automated import tools to streamline website migration processes and improve efficiency.</li>
+                            <li>Contributed to the development and enhancement of web systems, optimizing website performance and functionality.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                    <div class="md:col-span-1 mb-4 md:mb-0">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Web Developer Intern</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">McKula Inc., Norvelt, PA</p>
+                        <p class="text-sm text-gray-400 dark:text-gray-500">Sep 2013 - Jul 2014</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+                            <li>Developed custom websites, implementing responsive designs and user-friendly functionalities to meet client requirements.</li>
+                            <li>Contributed to the development of an incident reporting system and company Facebook page, enhancing internal processes and external brand presence.</li>
+                            <li>Enhanced design capabilities through Photoshop projects and the creation of instructional tutorials.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="fade-in-section mb-24">
+        <!-- Education & Skills Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+            <!-- Education -->
+            <div id="education" class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Education</h2>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">University of Pittsburgh</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">Major: Information Sciences</p>
+                    <p class="text-gray-500 dark:text-gray-400 mt-1">School of Computing and Information (CS Department) | 2016</p>
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Graduated with honors (GPA: 3.4)</p>
+                </div>
+            </div>
+            <!-- Skills -->
+            <div id="skills" class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Technical Skills</h2>
+                 <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Product Management</h4>
+                        <p class="text-gray-600 dark:text-gray-300">SAFe 5 Practitioner, Agile, Scrum, JIRA, Confluence, Roadmapping</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Programming &amp; Dev</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Java, JavaScript, SQL, HTML5, CSS3, PHP, Git, Low-code Platforms</p>
+                    </div>
+                     <div>
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Certifications</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            <a href="https://www.linkedin.com/in/ost4p/details/certifications/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline">View Certifications on LinkedIn</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="websites" class="fade-in-section mb-24">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12">Our Work</h2>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12">Featured Projects</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: Berg Dental -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental" alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover">
+                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental" alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Berg Dental DMD</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local dental practice to increase bookings and online visibility.</p>
-                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <div class="mt-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local SEO</span>
+                        </div>
+                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                            View Live Site &rarr;
+                        </a>
                     </div>
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card 2: Pita My Shawarma -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma" alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover">
+                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma" alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pita My Shawarma</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food vendor, featuring menus and location information.</p>
-                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <div class="mt-4">
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
+                             <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local SEO</span>
+                        </div>
+                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                            View Live Site &rarr;
+                        </a>
                     </div>
                 </div>
-                <!-- Project Card 3 -->
+                <!-- Project Card 3: Pittua Podcast -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com" alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to feature episodes and connect with a global audience.</p>
-                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                         <div class="mt-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-200 dark:text-indigo-900">Media Platform</span>
+                        </div>
+                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                            View Live Site &rarr;
+                        </a>
                     </div>
                 </div>
-                <!-- Project Card 4 -->
+                <!-- Project Card 4: Handyman Manlius -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius" alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction company to generate leads and showcase their services.</p>
-                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <div class="mt-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
+                             <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-200 dark:text-red-900">Lead Generation</span>
+                        </div>
+                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                            View Live Site &rarr;
+                        </a>
                     </div>
                 </div>
             </div>
+            <!-- Added Link -->
+            <div class="text-center mt-16">
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
+                    Need a website? &rarr;
+                </a>
+            </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="mb-24 fade-in-section">
-             <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    <div class="md:col-span-1 text-center">
-                        <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych" class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
-                    </div>
-                    <div class="md:col-span-2">
-                         <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">About Me</h2>
-                         <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                            With over 10 years of experience in the technology industry and a degree in Information Sciences from the University of Pittsburgh, I founded OL Website Services to bring enterprise-level expertise to small businesses.
-                         </p>
-                         <p class="text-lg text-gray-600 dark:text-gray-300">
-                            My mission is to provide affordable, high-quality technical and web development services to the Pittsburgh Metro area and beyond, helping businesses like yours succeed in the digital world.
-                         </p>
-                    </div>
-                </div>
-             </div>
-        </section>
-
-        <!-- Contact Section -->
+        <!-- NEW Contact Form Section -->
         <section id="contact" class="fade-in-section mb-24">
             <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Ready to Start Your Project?</h2>
-                <p class="text-center text-gray-500 dark:text-gray-400 mb-8">Feel free to reach out to discuss your ideas. I'm happy to provide a free quote and consultation.</p>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Get In Touch</h2>
                 <form id="contact-form" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
@@ -288,9 +422,6 @@
                 <p class="text-center text-gray-500 dark:text-gray-400 mt-6">
                     Or email me at: <a href="mailto:admin@ost4p.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
                 </p>
-                 <p class="mt-4 text-center text-lg text-gray-500 dark:text-gray-400">
-                    Or call: <a href="tel:+12675365312" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">(267) 536-5312</a>
-                </p>
             </div>
         </section>
 
@@ -299,13 +430,14 @@
     <!-- Footer -->
     <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-24">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-             <h3 class="text-2xl font-bold text-gray-800 dark:text-white">OL Website Services & Tech Help</h3>
-             <p class="mt-2 text-gray-500 dark:text-gray-400">
-                Serving the Pittsburgh Metro area and beyond.
-                <br>
-                <a href="tel:+12675365312" class="hover:text-blue-500">(267) 536-5312</a>
-             </p>
-            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2025 OL Website Services & Tech Help. All rights reserved.</p>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Let's Connect</h3>
+            <p class="mt-2 text-gray-500 dark:text-gray-400">I'm always open to discussing new projects and creative ideas. I also specialize in creating modern, effective websites for small businesses.</p>
+            <div class="mt-6">
+                 <a href="#contact" class="halo-glow inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2025 Ostap Lernatovych. All rights reserved.</p>
         </div>
     </footer>
 
@@ -314,58 +446,82 @@
         <p id="notification-message"></p>
     </div>
 
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ostap Lernatovych",
+      "jobTitle": "Technology Product Manager",
+      "url": "https://ost4p.com",
+      "image": "https://ost4p.com/profilepicture.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/ost4p/"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University of Pittsburgh",
+        "department": "School of Computing and Information"
+      },
+      "description": "Highly accomplished and results-driven Technology Product Manager with over 10 years of experience in software development, project management, and team leadership.",
+      "skills": ["Product Management", "Agile Methodologies", "Scrum", "SAFe 5 Practitioner", "Java", "JavaScript", "SQL", "API Integration", "eCommerce"]
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- JavaScript for Interactions -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get all theme-related elements
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
-            const darkIcon = document.getElementById('theme-toggle-dark-icon');
-            const lightIcon = document.getElementById('theme-toggle-light-icon');
-            const darkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
-            const lightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
-
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+            const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+            // Particle configurations
             const lightParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#9ca3af" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#d1d5db", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
             const darkParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#4b5563" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#374151", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
             
             function initParticles(isDark) {
+                const config = isDark ? darkParticlesConfig : lightParticlesConfig;
                 const particlesDiv = document.getElementById('particles-js');
                 if (particlesDiv && window.particlesJS) {
-                   particlesJS('particles-js', isDark ? darkParticlesConfig : lightParticlesConfig);
+                    particlesJS('particles-js', config);
                 }
             }
 
-            // Function to update icon visibility
-            const updateIcons = (isDark) => {
-                if(darkIcon) darkIcon.classList.toggle('hidden', !isDark);
-                if(lightIcon) lightIcon.classList.toggle('hidden', isDark);
-                if(darkIconMobile) darkIconMobile.classList.toggle('hidden', !isDark);
-                if(lightIconMobile) lightIconMobile.classList.toggle('hidden', isDark);
-            };
-
-            // Function to set the theme
             const setTheme = (isDark) => {
-                document.documentElement.classList.toggle('dark', isDark);
-                localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
-                updateIcons(isDark);
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    themeToggleLightIcon.classList.add('hidden');
+                    themeToggleDarkIcon.classList.remove('hidden');
+                    themeToggleLightIconMobile.classList.add('hidden');
+                    themeToggleDarkIconMobile.classList.remove('hidden');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    themeToggleLightIcon.classList.remove('hidden');
+                    themeToggleDarkIcon.classList.add('hidden');
+                    themeToggleLightIconMobile.classList.remove('hidden');
+                    themeToggleDarkIconMobile.classList.add('hidden');
+                    localStorage.setItem('color-theme', 'light');
+                }
+                // Re-initialize particles with the correct theme after setting the theme
                 initParticles(isDark);
             };
 
-            // Function to handle the toggle action
+            // Check for saved theme and set it on page load
+            const isDarkMode = localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            setTheme(isDarkMode);
+
             const toggleTheme = () => {
-                setTheme(!document.documentElement.classList.contains('dark'));
+                const isDark = document.documentElement.classList.contains('dark');
+                setTheme(!isDark);
             };
 
-            // Set initial theme on page load
-            const isInitialDark = localStorage.getItem('color-theme') === 'dark' || 
-                                  (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-            setTheme(isInitialDark);
+            // Add event listeners for theme toggles
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
             
-            // Add event listeners
-            if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
-            if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
-
             // Mobile menu toggle
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -373,20 +529,22 @@
             const closeIcon = document.getElementById('close-icon');
 
             if(menuButton) {
-                 menuButton.addEventListener('click', () => {
-                     mobileMenu.classList.toggle('hidden');
-                     hamburgerIcon.classList.toggle('hidden');
-                     closeIcon.classList.toggle('hidden');
-                 });
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
             }
+
+            // Close mobile menu on link click
             if(mobileMenu) {
-                 mobileMenu.addEventListener('click', (event) => {
-                     if(event.target.tagName === 'A') {
-                         mobileMenu.classList.add('hidden');
-                         hamburgerIcon.classList.remove('hidden');
-                         closeIcon.classList.add('hidden');
-                     }
-                 });
+                mobileMenu.addEventListener('click', (event) => {
+                    if(event.target.tagName === 'A') {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
             }
 
             // Intersection Observer for fade-in animations
@@ -398,7 +556,7 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { rootMargin: '0px', threshold: 0.1 });
             sections.forEach(section => { observer.observe(section); });
 
             // Header name change on scroll
@@ -413,14 +571,14 @@
                     isFullName = false;
                     headerName.style.opacity = '0';
                     setTimeout(() => {
-                        headerName.textContent = 'OL Services';
+                        headerName.textContent = 'OL';
                         headerName.style.opacity = '1';
                     }, 400);
                 } else if (!showInitials && !isFullName) {
                     isFullName = true;
                     headerName.style.opacity = '0';
                     setTimeout(() => {
-                        headerName.textContent = 'OL Website Services & Tech Help';
+                        headerName.textContent = 'Ostap Lernatovych';
                         headerName.style.opacity = '1';
                     }, 400);
                 }
