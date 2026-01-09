@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OL Website Services & Tech Help | Pittsburgh</title>
     <!-- Meta Tags for SEO and Social Sharing -->
-    <meta name="description" content="Professional website design, development, and tech help services in the Pittsburgh Metro area. Over 10 years of experience.">
+    <meta name="description"
+        content="Professional website design, development, and tech help services in the Pittsburgh Metro area. Over 10 years of experience.">
     <meta property="og:title" content="OL Website Services & Tech Help">
-    <meta property="og:description" content="Modern websites and reliable tech support for your business. Serving the Pittsburgh Metro area and beyond.">
+    <meta property="og:description"
+        content="Modern websites and reliable tech support for your business. Serving the Pittsburgh Metro area and beyond.">
     <meta property="og:url" content="https://ost4p.com/website">
     <meta property="og:image" content="https://ost4p.com/profilepicture.jpg"> <!-- Consider a business logo here -->
     <meta property="og:type" content="website">
@@ -24,19 +27,54 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Calendar Appointment Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* Gradient headings */
+        h1,
+        h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Bouncing consultation button animation */
+        @keyframes bounce-subtle {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        #custom-consultation-btn {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        #custom-consultation-btn:hover {
+            animation: none;
+        }
+
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -48,21 +86,27 @@
             background-color: #2563EB;
             transition: width 0.3s ease;
         }
-        .nav-link:hover::after, .nav-link.active::after {
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
+
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         #header-name {
             transition: opacity 0.4s ease-in-out;
         }
+
         #particles-js {
             position: fixed;
             width: 100%;
@@ -71,20 +115,34 @@
             left: 0;
             z-index: -1;
         }
-        main, footer, header {
+
+        main,
+        footer,
+        header {
             position: relative;
             z-index: 1;
         }
+
         @keyframes halo-glow {
-            0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
-            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4); }
-            100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
+            0% {
+                box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2);
+            }
         }
+
         .halo-glow {
             animation: halo-glow 4s ease-in-out infinite;
         }
     </style>
 </head>
+
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
     <div id="particles-js"></div>
 
@@ -93,38 +151,75 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" id="header-name" class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">OL Website Services & Tech Help</a>
+                    <a href="#" id="header-name"
+                        class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">OL Website Services &
+                        Tech Help</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Services</a>
-                    <a href="#portfolio" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Portfolio</a>
-                    <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
-                    <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+                    <a href="#services"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Services</a>
+                    <a href="#portfolio"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Portfolio</a>
+                    <a href="#about"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
                 </nav>
                 <div class="hidden md:flex items-center">
-                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 ml-4">
-                        <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 ml-4">
+                        <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z">
+                            </path>
+                        </svg>
                     </button>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
-                        <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
+                    <button id="theme-toggle-mobile"
+                        class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z">
+                            </path>
+                        </svg>
                     </button>
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400">
-                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400">
+                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
-                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Portfolio</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <a href="#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+                <a href="#portfolio"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Portfolio</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
             </div>
         </div>
     </header>
@@ -133,14 +228,17 @@
         <!-- Hero Section -->
         <section class="text-center mb-24 fade-in-section">
             <div class="py-16 sm:py-24">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
                     Modern Websites & Reliable Tech Help
                 </h1>
                 <p class="mt-4 max-w-3xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-                    Helping small businesses in the Pittsburgh Metro area and beyond thrive with professional, affordable web and IT solutions.
+                    Helping small businesses in the Pittsburgh Metro area and beyond thrive with professional,
+                    affordable web and IT solutions.
                 </p>
                 <div class="mt-10">
-                    <a href="#contact" class="halo-glow inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                    <a href="#contact"
+                        class="halo-glow inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105">
                         Get a Free Quote
                     </a>
                 </div>
@@ -157,37 +255,43 @@
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-desktop text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Custom Website Design</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Beautiful, responsive websites built from scratch to perfectly match your brand and goals.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Beautiful, responsive websites built from scratch to
+                        perfectly match your brand and goals.</p>
                 </div>
                 <!-- Service Card 2 -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-shopping-cart text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">eCommerce Solutions</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Powerful online stores to sell your products and services to a global audience.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Powerful online stores to sell your products and
+                        services to a global audience.</p>
                 </div>
                 <!-- Service Card 3 -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-chart-line text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Local SEO Optimization</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Helping local customers find your business online through targeted search engine optimization.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Helping local customers find your business online
+                        through targeted search engine optimization.</p>
                 </div>
                 <!-- Service Card 4 -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-headset text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">On-Demand Tech Help</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Fast, reliable technical support for your computers, software, and network issues.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Fast, reliable technical support for your computers,
+                        software, and network issues.</p>
                 </div>
                 <!-- Service Card 5 -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-cogs text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Website Maintenance</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Keeping your website secure, updated, and running smoothly with our maintenance plans.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Keeping your website secure, updated, and running
+                        smoothly with our maintenance plans.</p>
                 </div>
-                 <!-- Service Card 6 -->
-                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
+                <!-- Service Card 6 -->
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md text-center">
                     <i class="fas fa-pen-ruler text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Consulting</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Expert advice to help you make the right technology decisions for your business.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Expert advice to help you make the right technology
+                        decisions for your business.</p>
                 </div>
             </div>
         </section>
@@ -199,39 +303,62 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Project Card 1 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental" alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental"
+                        alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Berg Dental DMD</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local dental practice to increase bookings and online visibility.</p>
-                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local
+                            dental practice to increase bookings and online visibility.</p>
+                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 2 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma" alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma"
+                        alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pita My Shawarma</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food vendor, featuring menus and location information.</p>
-                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food
+                            vendor, featuring menus and location information.</p>
+                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 3 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com" alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com"
+                        alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to feature episodes and connect with a global audience.</p>
-                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone
+                        </h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to
+                            feature episodes and connect with a global audience.</p>
+                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 4 -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius" alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius"
+                        alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction company to generate leads and showcase their services.</p>
-                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site &rarr;</a>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction
+                            company to generate leads and showcase their services.</p>
+                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -239,57 +366,72 @@
 
         <!-- About Section -->
         <section id="about" class="mb-24 fade-in-section">
-             <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-md">
+            <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-md">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1 text-center">
-                        <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych" class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
+                        <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych"
+                            class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
                     </div>
                     <div class="md:col-span-2">
-                         <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">About Me</h2>
-                         <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                            With over 10 years of experience in the technology industry and a degree in Information Sciences from the University of Pittsburgh, I founded OL Website Services to bring enterprise-level expertise to small businesses.
-                         </p>
-                         <p class="text-lg text-gray-600 dark:text-gray-300">
-                            My mission is to provide affordable, high-quality technical and web development services to the Pittsburgh Metro area and beyond, helping businesses like yours succeed in the digital world.
-                         </p>
+                        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">About Me</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+                            With over 10 years of experience in the technology industry and a degree in Information
+                            Sciences from the University of Pittsburgh, I founded OL Website Services to bring
+                            enterprise-level expertise to small businesses.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-300">
+                            My mission is to provide affordable, high-quality technical and web development services to
+                            the Pittsburgh Metro area and beyond, helping businesses like yours succeed in the digital
+                            world.
+                        </p>
                     </div>
                 </div>
-             </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="fade-in-section mb-24">
             <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Ready to Start Your Project?</h2>
-                <p class="text-center text-gray-500 dark:text-gray-400 mb-8">Feel free to reach out to discuss your ideas. I'm happy to provide a free quote and consultation.</p>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Ready to Start Your
+                    Project?</h2>
+                <p class="text-center text-gray-500 dark:text-gray-400 mb-8">Feel free to reach out to discuss your
+                    ideas. I'm happy to provide a free quote and consultation.</p>
                 <form id="contact-form" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="email" class="sr-only">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="phone" class="sr-only">Phone</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="How can I help you?" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="How can I help you?" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
                     </div>
                     <div>
-                        <button type="submit" id="submit-button" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <button type="submit" id="submit-button"
+                            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                             Send Message
                         </button>
                     </div>
                 </form>
                 <p class="text-center text-gray-500 dark:text-gray-400 mt-6">
-                    Or email me at: <a href="mailto:admin@ost4p.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
+                    Or email me at: <a href="mailto:admin@ost4p.com"
+                        class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
                 </p>
-                 <p class="mt-4 text-center text-lg text-gray-500 dark:text-gray-400">
-                    Or call: <a href="tel:+12675365312" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">(267) 536-5312</a>
+                <p class="mt-4 text-center text-lg text-gray-500 dark:text-gray-400">
+                    Or call: <a href="tel:+12675365312"
+                        class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">(267) 536-5312</a>
                 </p>
             </div>
         </section>
@@ -299,18 +441,21 @@
     <!-- Footer -->
     <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-24">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-             <h3 class="text-2xl font-bold text-gray-800 dark:text-white">OL Website Services & Tech Help</h3>
-             <p class="mt-2 text-gray-500 dark:text-gray-400">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">OL Website Services & Tech Help</h3>
+            <p class="mt-2 text-gray-500 dark:text-gray-400">
                 Serving the Pittsburgh Metro area and beyond.
                 <br>
                 <a href="tel:+12675365312" class="hover:text-blue-500">(267) 536-5312</a>
-             </p>
-            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2025 OL Website Services & Tech Help. All rights reserved.</p>
+            </p>
+            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; <span
+                    id="copyright-year"></span> OL Website Services &
+                Tech Help. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Notification Toast -->
-    <div id="notification" class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
+    <div id="notification"
+        class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
         <p id="notification-message"></p>
     </div>
 
@@ -318,6 +463,12 @@
     <!-- JavaScript for Interactions -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Set copyright year dynamically
+            const yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
             // Get all theme-related elements
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
@@ -328,20 +479,20 @@
 
             const lightParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#9ca3af" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#d1d5db", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
             const darkParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#4b5563" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#374151", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
-            
+
             function initParticles(isDark) {
                 const particlesDiv = document.getElementById('particles-js');
                 if (particlesDiv && window.particlesJS) {
-                   particlesJS('particles-js', isDark ? darkParticlesConfig : lightParticlesConfig);
+                    particlesJS('particles-js', isDark ? darkParticlesConfig : lightParticlesConfig);
                 }
             }
 
             // Function to update icon visibility
             const updateIcons = (isDark) => {
-                if(darkIcon) darkIcon.classList.toggle('hidden', !isDark);
-                if(lightIcon) lightIcon.classList.toggle('hidden', isDark);
-                if(darkIconMobile) darkIconMobile.classList.toggle('hidden', !isDark);
-                if(lightIconMobile) lightIconMobile.classList.toggle('hidden', isDark);
+                if (darkIcon) darkIcon.classList.toggle('hidden', !isDark);
+                if (lightIcon) lightIcon.classList.toggle('hidden', isDark);
+                if (darkIconMobile) darkIconMobile.classList.toggle('hidden', !isDark);
+                if (lightIconMobile) lightIconMobile.classList.toggle('hidden', isDark);
             };
 
             // Function to set the theme
@@ -358,10 +509,10 @@
             };
 
             // Set initial theme on page load
-            const isInitialDark = localStorage.getItem('color-theme') === 'dark' || 
-                                  (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            const isInitialDark = localStorage.getItem('color-theme') === 'dark' ||
+                (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
             setTheme(isInitialDark);
-            
+
             // Add event listeners
             if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
             if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
@@ -372,21 +523,21 @@
             const hamburgerIcon = document.getElementById('hamburger-icon');
             const closeIcon = document.getElementById('close-icon');
 
-            if(menuButton) {
-                 menuButton.addEventListener('click', () => {
-                     mobileMenu.classList.toggle('hidden');
-                     hamburgerIcon.classList.toggle('hidden');
-                     closeIcon.classList.toggle('hidden');
-                 });
+            if (menuButton) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
             }
-            if(mobileMenu) {
-                 mobileMenu.addEventListener('click', (event) => {
-                     if(event.target.tagName === 'A') {
-                         mobileMenu.classList.add('hidden');
-                         hamburgerIcon.classList.remove('hidden');
-                         closeIcon.classList.add('hidden');
-                     }
-                 });
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', (event) => {
+                    if (event.target.tagName === 'A') {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
             }
 
             // Intersection Observer for fade-in animations
@@ -413,7 +564,7 @@
                     isFullName = false;
                     headerName.style.opacity = '0';
                     setTimeout(() => {
-                        headerName.textContent = 'OL Services';
+                        headerName.textContent = 'OL Website Services';
                         headerName.style.opacity = '1';
                     }, 400);
                 } else if (!showInitials && !isFullName) {
@@ -446,7 +597,7 @@
             if (contactForm) {
                 contactForm.addEventListener('submit', (event) => {
                     event.preventDefault();
-                    
+
                     submitButton.disabled = true;
                     submitButton.textContent = 'Sending...';
 
@@ -488,5 +639,55 @@
             }
         });
     </script>
+
+    <!-- Google Calendar Appointment Scheduling -->
+    <!-- Hidden container for Google's auto-generated button -->
+    <div id="google-calendar-container" class="hidden">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function () {
+                var target = document.currentScript;
+                window.addEventListener('load', function () {
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0U7AqFqsWgTwzSpBGV8V2VvwkoJP-LiKPThVd0_70If2CGUiQxRaEHZLc5YGP9mqUk6VDH-qsN?gv=true',
+                        color: '#039BE5',
+                        label: 'Free Consultation',
+                        target,
+                    });
+                });
+            })();
+        </script>
+    </div>
+
+    <!-- Custom styled button -->
+    <button id="custom-consultation-btn"
+        class="fixed bottom-6 right-6 z-[100] inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>Free Consultation</span>
+    </button>
+
+    <script>
+        // Trigger the Google Calendar modal when custom button is clicked
+        document.addEventListener('DOMContentLoaded', function () {
+            const customBtn = document.getElementById('custom-consultation-btn');
+
+            customBtn.addEventListener('click', function () {
+                // Find the Google-generated button and click it
+                const googleBtn = document.querySelector('#google-calendar-container button');
+                if (googleBtn) {
+                    googleBtn.click();
+                } else {
+                    // Fallback: wait a bit for the button to be generated
+                    setTimeout(function () {
+                        const googleBtnRetry = document.querySelector('#google-calendar-container button');
+                        if (googleBtnRetry) {
+                            googleBtnRetry.click();
+                        }
+                    }, 500);
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

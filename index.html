@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostap Lernatovych - Technology Product Leader</title>
     <!-- Meta Tags for SEO and Social Sharing -->
-    <meta name="description" content="Results-Oriented Tech Leader with 10+ years of experience building products and driving growth.">
+    <meta name="description"
+        content="Results-Oriented Tech Leader with 10+ years of experience building products and driving growth.">
     <meta property="og:title" content="Ostap Lernatovych - Portfolio">
     <meta property="og:description" content="Results-Oriented Tech Leader with 10+ years of experience.">
     <meta property="og:url" content="https://ost4p.com/">
@@ -24,17 +26,52 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Google Calendar Appointment Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* Gradient headings */
+        h1,
+        h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Bouncing consultation button animation */
+        @keyframes bounce-subtle {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        #custom-consultation-btn {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        #custom-consultation-btn:hover {
+            animation: none;
+        }
+
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -43,24 +80,31 @@
             bottom: -4px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #2563EB; /* Replaced @apply bg-blue-600; */
+            background-color: #2563EB;
+            /* Replaced @apply bg-blue-600; */
             transition: width 0.3s ease;
         }
-        .nav-link:hover::after, .nav-link.active::after {
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
+
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         #header-name {
             transition: opacity 0.4s ease-in-out;
         }
+
         #particles-js {
             position: fixed;
             width: 100%;
@@ -69,28 +113,63 @@
             left: 0;
             z-index: -1;
         }
-        main, footer, header {
+
+        main,
+        footer,
+        header {
             position: relative;
             z-index: 1;
         }
+
+        /* Halo glow effect for buttons */
+        @keyframes halo-glow {
+            0% {
+                box-shadow: 0 0 5px rgba(139, 92, 246, 0.3), 0 0 10px rgba(139, 92, 246, 0.2), 0 0 15px rgba(139, 92, 246, 0.1);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+            }
+
+            100% {
+                box-shadow: 0 0 5px rgba(139, 92, 246, 0.3), 0 0 10px rgba(139, 92, 246, 0.2), 0 0 15px rgba(139, 92, 246, 0.1);
+            }
+        }
+
+        .halo-glow {
+            animation: halo-glow 3s ease-in-out infinite;
+        }
+
         .hero-section {
             position: relative;
             overflow: hidden;
         }
+
         .hero-content {
             position: relative;
             z-index: 1;
         }
+
         @keyframes halo-glow {
-            0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
-            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4); }
-            100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2); }
+            0% {
+                box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), 0 0 30px rgba(37, 99, 235, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 5px rgba(37, 99, 235, 0.2), 0 0 10px rgba(37, 99, 235, 0.2);
+            }
         }
+
         .halo-glow {
             animation: halo-glow 4s ease-in-out infinite;
         }
     </style>
 </head>
+
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
     <!-- The particle canvas is now at the top level to act as a global background -->
     <div id="particles-js"></div>
@@ -100,39 +179,71 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" id="header-name" class="text-2xl font-bold text-gray-800 dark:text-gray-100">Ostap Lernatovych</a>
+                    <a href="#" id="header-name" class="text-2xl font-bold text-gray-800 dark:text-gray-100">Ostap
+                        Lernatovych</a>
                 </div>
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#experience" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Experience</a>
-                    <a href="#education" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Education</a>
-                    <a href="#skills" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
-                    <a href="#websites" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
-                    <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
-                    <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">OL Website Services</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Experience</a>
+                    <a href="#education"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Education</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
+                    <a href="#websites"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+                    <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">OL
+                        Website Services</a>
                 </nav>
                 <div class="hidden md:flex items-center space-x-4">
-                     <a href="#contact" class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                    <a href="#contact"
+                        class="halo-glow inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105">
                         Contact Me
                     </a>
-                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
-                        <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z">
+                            </path>
+                        </svg>
                     </button>
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
-                        <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
-                    </button>
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                        <span class="sr-only">Open main menu</span>
-                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <button id="theme-toggle-mobile"
+                        class="p-2 mr-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden h-5 w-5" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
-                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <svg id="theme-toggle-light-icon-mobile" class="hidden h-5 w-5" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 16.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
@@ -141,12 +252,20 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Experience</a>
-                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Education</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Skills</a>
-                <a href="#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Projects</a>
-                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">OL Website Services</a>
-                <a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact Me</a>
+                <a href="#experience"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Experience</a>
+                <a href="#education"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Education</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Skills</a>
+                <a href="#websites"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Projects</a>
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">OL
+                    Website Services</a>
+                <a href="#contact"
+                    class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact
+                    Me</a>
             </div>
         </div>
     </header>
@@ -155,18 +274,23 @@
         <!-- Hero Section -->
         <section class="hero-section text-center mb-24">
             <div class="hero-content fade-in-section py-16 sm:py-24">
-                <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+                <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych"
+                    class="w-40 h-40 rounded-full mx-auto mb-6 shadow-lg object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
                     A Decade of Tech Leadership
                 </h1>
                 <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400">
                     Taking products from the initial code all the way to launch.
                 </p>
                 <div class="mt-8 flex justify-center items-center space-x-6">
-                    <a href="https://www.linkedin.com/in/ost4p/" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition">
+                    <a href="https://www.linkedin.com/in/ost4p/" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition">
                         <span class="sr-only">LinkedIn</span>
                         <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                     </a>
                 </div>
@@ -174,18 +298,22 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="mb-24 fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
-            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center sm:text-left">Professional Experience</h2>
+        <section id="experience"
+            class="mb-24 fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center sm:text-left">Professional
+                Experience</h2>
             <div class="space-y-12">
-                 <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
                     <div class="md:col-span-1 mb-4 md:mb-0">
-                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Technical Product Specialist and App Delivery II</h4>
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200">Technical Product Specialist and App
+                            Delivery II</h4>
                         <p class="text-sm text-gray-500 dark:text-gray-400">BNY, Pittsburgh, PA</p>
                         <p class="text-sm text-gray-400 dark:text-gray-500">June 2025 - Present</p>
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                            <li>Defining and executing market engineering strategies to enhance application delivery and performance.</li>
+                            <li>Defining and executing market engineering strategies to enhance application delivery and
+                                performance.</li>
                         </ul>
                     </div>
                 </div>
@@ -197,12 +325,18 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                            <li>Drove cross-functional teams to deliver 5 complex integrations and APIs using Agile methodologies, resulting in 25% efficiency gains and $1.2 million in cost savings.</li>
-                            <li>Architected and executed product roadmaps aligned with business objectives, increasing revenue by 15% and enhancing customer satisfaction by 20%.</li>
-                            <li>Mitigated project risks through proactive issue management, preventing potential losses.</li>
-                            <li>Streamlined project management using Jira and Confluence, improving team collaboration by 30% and enhancing project visibility.</li>
-                            <li>Implemented Scrum frameworks to optimize product development, accelerating time-to-market by 20% and improving product quality by 15%.</li>
-                            <li>Managed product backlogs and prioritized features to align with business objectives and customer needs.</li>
+                            <li>Drove cross-functional teams to deliver 5 complex integrations and APIs using Agile
+                                methodologies, resulting in 25% efficiency gains and $1.2 million in cost savings.</li>
+                            <li>Architected and executed product roadmaps aligned with business objectives, increasing
+                                revenue by 15% and enhancing customer satisfaction by 20%.</li>
+                            <li>Mitigated project risks through proactive issue management, preventing potential losses.
+                            </li>
+                            <li>Streamlined project management using Jira and Confluence, improving team collaboration
+                                by 30% and enhancing project visibility.</li>
+                            <li>Implemented Scrum frameworks to optimize product development, accelerating
+                                time-to-market by 20% and improving product quality by 15%.</li>
+                            <li>Managed product backlogs and prioritized features to align with business objectives and
+                                customer needs.</li>
                         </ul>
                     </div>
                 </div>
@@ -214,15 +348,19 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                           <li>Developed and optimized high-performance Java, SQL, and JavaScript applications to enhance operational efficiency by 25%.</li>
+                            <li>Developed and optimized high-performance Java, SQL, and JavaScript applications to
+                                enhance operational efficiency by 25%.</li>
                             <li>Led a 10-person Agile team to deliver complex software solutions.</li>
-                            <li>Engineered innovative solutions to address critical security vulnerabilities, protecting sensitive data and ensuring system integrity.</li>
-                            <li>Improved user experience by 20% through data-driven code optimizations, resulting in increased user satisfaction and productivity.</li>
-                            <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions. Implemented strategies to drive customer acquisition and retention.</li>
+                            <li>Engineered innovative solutions to address critical security vulnerabilities, protecting
+                                sensitive data and ensuring system integrity.</li>
+                            <li>Improved user experience by 20% through data-driven code optimizations, resulting in
+                                increased user satisfaction and productivity.</li>
+                            <li>Contributed to $3.78B eBusiness revenue by developing scalable eCommerce solutions.
+                                Implemented strategies to drive customer acquisition and retention.</li>
                         </ul>
                     </div>
                 </div>
-                 <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8">
                     <div class="md:col-span-1 mb-4 md:mb-0">
                         <h4 class="font-semibold text-gray-700 dark:text-gray-200">IT Project Manager</h4>
                         <p class="text-sm text-gray-500 dark:text-gray-400">Thermo Fisher Scientific, Pittsburgh, PA</p>
@@ -230,11 +368,16 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                            <li>Drove revenue generation through successful EDI and electronic commerce supplier onboarding, generating millions in revenue.</li>
-                            <li>Managed end-to-end software development lifecycle, from concept to deployment, optimizing efficiency and time-to-market.</li>
-                            <li>Orchestrated complex code releases and API integrations across multiple IT teams, ensuring seamless system operations.</li>
-                            <li>Delivered B2B electronic commerce solutions through in-depth research, configuration, and documentation, resulting in 20% growth.</li>
-                            <li>Provided expert guidance to end-users through effective presentations and training, enhancing user adoption and satisfaction.</li>
+                            <li>Drove revenue generation through successful EDI and electronic commerce supplier
+                                onboarding, generating millions in revenue.</li>
+                            <li>Managed end-to-end software development lifecycle, from concept to deployment,
+                                optimizing efficiency and time-to-market.</li>
+                            <li>Orchestrated complex code releases and API integrations across multiple IT teams,
+                                ensuring seamless system operations.</li>
+                            <li>Delivered B2B electronic commerce solutions through in-depth research, configuration,
+                                and documentation, resulting in 20% growth.</li>
+                            <li>Provided expert guidance to end-users through effective presentations and training,
+                                enhancing user adoption and satisfaction.</li>
                         </ul>
                     </div>
                 </div>
@@ -246,9 +389,12 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                            <li>Managed agile development processes to deliver weekly production builds, supporting rapid product iterations.</li>
-                            <li>Optimized website performance by implementing caching and compression technologies, resulting in a 40% increase in website speed.</li>
-                            <li>Accelerated startup growth by 80% month-over-month through innovative marketing strategies including growth hacking, influencer outreach, and SEO/SEM.</li>
+                            <li>Managed agile development processes to deliver weekly production builds, supporting
+                                rapid product iterations.</li>
+                            <li>Optimized website performance by implementing caching and compression technologies,
+                                resulting in a 40% increase in website speed.</li>
+                            <li>Accelerated startup growth by 80% month-over-month through innovative marketing
+                                strategies including growth hacking, influencer outreach, and SEO/SEM.</li>
                         </ul>
                     </div>
                 </div>
@@ -260,9 +406,12 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                           <li>Developed over 30 custom websites and online stores, collaborating with design teams to deliver exceptional client solutions.</li>
-                            <li>Engineered automated import tools to streamline website migration processes and improve efficiency.</li>
-                            <li>Contributed to the development and enhancement of web systems, optimizing website performance and functionality.</li>
+                            <li>Developed over 30 custom websites and online stores, collaborating with design teams to
+                                deliver exceptional client solutions.</li>
+                            <li>Engineered automated import tools to streamline website migration processes and improve
+                                efficiency.</li>
+                            <li>Contributed to the development and enhancement of web systems, optimizing website
+                                performance and functionality.</li>
                         </ul>
                     </div>
                 </div>
@@ -274,9 +423,12 @@
                     </div>
                     <div class="md:col-span-3">
                         <ul class="list-disc list-outside space-y-2 pl-5 text-gray-600 dark:text-gray-300">
-                            <li>Developed custom websites, implementing responsive designs and user-friendly functionalities to meet client requirements.</li>
-                            <li>Contributed to the development of an incident reporting system and company Facebook page, enhancing internal processes and external brand presence.</li>
-                            <li>Enhanced design capabilities through Photoshop projects and the creation of instructional tutorials.</li>
+                            <li>Developed custom websites, implementing responsive designs and user-friendly
+                                functionalities to meet client requirements.</li>
+                            <li>Contributed to the development of an incident reporting system and company Facebook
+                                page, enhancing internal processes and external brand presence.</li>
+                            <li>Enhanced design capabilities through Photoshop projects and the creation of
+                                instructional tutorials.</li>
                         </ul>
                     </div>
                 </div>
@@ -286,31 +438,41 @@
         <!-- Education & Skills Section -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
             <!-- Education -->
-            <div id="education" class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Education</h2>
+            <div id="education"
+                class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Education
+                </h2>
                 <div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">University of Pittsburgh</h3>
                     <p class="text-blue-600 dark:text-blue-400 font-medium">Major: Information Sciences</p>
-                    <p class="text-gray-500 dark:text-gray-400 mt-1">School of Computing and Information (CS Department) | 2016</p>
+                    <p class="text-gray-500 dark:text-gray-400 mt-1">School of Computing and Information (CS Department)
+                        | 2016</p>
                     <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Graduated with honors (GPA: 3.4)</p>
                 </div>
             </div>
             <!-- Skills -->
-            <div id="skills" class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Technical Skills</h2>
-                 <div class="space-y-4">
+            <div id="skills"
+                class="fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center sm:text-left">Technical
+                    Skills</h2>
+                <div class="space-y-4">
                     <div>
                         <h4 class="font-semibold text-gray-700 dark:text-gray-200">Product Management</h4>
-                        <p class="text-gray-600 dark:text-gray-300">SAFe 5 Practitioner, Agile, Scrum, JIRA, Confluence, Roadmapping</p>
+                        <p class="text-gray-600 dark:text-gray-300">SAFe 5 Practitioner, Agile, Scrum, JIRA, Confluence,
+                            Roadmapping</p>
                     </div>
                     <div>
                         <h4 class="font-semibold text-gray-700 dark:text-gray-200">Programming &amp; Dev</h4>
-                        <p class="text-gray-600 dark:text-gray-300">Java, JavaScript, SQL, HTML5, CSS3, PHP, Git, Low-code Platforms</p>
+                        <p class="text-gray-600 dark:text-gray-300">Java, JavaScript, SQL, HTML5, CSS3, PHP, Git,
+                            Low-code Platforms</p>
                     </div>
-                     <div>
+                    <div>
                         <h4 class="font-semibold text-gray-700 dark:text-gray-200">Certifications</h4>
                         <p class="text-gray-600 dark:text-gray-300">
-                            <a href="https://www.linkedin.com/in/ost4p/details/certifications/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline">View Certifications on LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/ost4p/details/certifications/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline">View
+                                Certifications on LinkedIn</a>
                         </p>
                     </div>
                 </div>
@@ -324,61 +486,98 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Project Card 1: Berg Dental -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental" alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental"
+                        alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Berg Dental DMD</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local dental practice to increase bookings and online visibility.</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local
+                            dental practice to increase bookings and online visibility.</p>
                         <div class="mt-4">
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local SEO</span>
+                            <span
+                                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web
+                                Development</span>
+                            <span
+                                class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local
+                                SEO</span>
                         </div>
-                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                        <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
                             View Live Site &rarr;
                         </a>
                     </div>
                 </div>
                 <!-- Project Card 2: Pita My Shawarma -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma" alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma"
+                        alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pita My Shawarma</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food vendor, featuring menus and location information.</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food
+                            vendor, featuring menus and location information.</p>
                         <div class="mt-4">
-                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
-                             <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local SEO</span>
+                            <span
+                                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web
+                                Development</span>
+                            <span
+                                class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900">Local
+                                SEO</span>
                         </div>
-                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                        <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
                             View Live Site &rarr;
                         </a>
                     </div>
                 </div>
                 <!-- Project Card 3: Pittua Podcast -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com" alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com"
+                        alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to feature episodes and connect with a global audience.</p>
-                         <div class="mt-4">
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-200 dark:text-indigo-900">Media Platform</span>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ukraine in the Heart of Everyone
+                        </h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to
+                            feature episodes and connect with a global audience.</p>
+                        <div class="mt-4">
+                            <span
+                                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web
+                                Development</span>
+                            <span
+                                class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-200 dark:text-indigo-900">Media
+                                Platform</span>
                         </div>
-                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                        <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
                             View Live Site &rarr;
                         </a>
                     </div>
                 </div>
                 <!-- Project Card 4: Handyman Manlius -->
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius" alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius"
+                        alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
-                        <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction company to generate leads and showcase their services.</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction
+                            company to generate leads and showcase their services.</p>
                         <div class="mt-4">
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web Development</span>
-                             <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-200 dark:text-red-900">Lead Generation</span>
+                            <span
+                                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900">Web
+                                Development</span>
+                            <span
+                                class="inline-block bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-200 dark:text-red-900">Lead
+                                Generation</span>
                         </div>
-                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                        <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
                             View Live Site &rarr;
                         </a>
                     </div>
@@ -386,7 +585,8 @@
             </div>
             <!-- Added Link -->
             <div class="text-center mt-16">
-                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
+                <a href="https://ost4p.com/website" target="_blank" rel="noopener noreferrer"
+                    class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
                     Need a website? &rarr;
                 </a>
             </div>
@@ -399,28 +599,34 @@
                 <form id="contact-form" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="email" class="sr-only">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="phone" class="sr-only">Phone</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                     </div>
                     <div>
                         <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="How can I help you?" required class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="How can I help you?" required
+                            class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
                     </div>
                     <div>
-                        <button type="submit" id="submit-button" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <button type="submit" id="submit-button"
+                            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                             Send Message
                         </button>
                     </div>
                 </form>
                 <p class="text-center text-gray-500 dark:text-gray-400 mt-6">
-                    Or email me at: <a href="mailto:admin@ost4p.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
+                    Or email me at: <a href="mailto:admin@ost4p.com"
+                        class="text-blue-600 dark:text-blue-400 hover:underline">admin@ost4p.com</a>
                 </p>
             </div>
         </section>
@@ -431,18 +637,23 @@
     <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-24">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Let's Connect</h3>
-            <p class="mt-2 text-gray-500 dark:text-gray-400">I'm always open to discussing new projects and creative ideas. I also specialize in creating modern, effective websites for small businesses.</p>
+            <p class="mt-2 text-gray-500 dark:text-gray-400">I'm always open to discussing new projects and creative
+                ideas. I also specialize in creating modern, effective websites for small businesses.</p>
             <div class="mt-6">
-                 <a href="#contact" class="halo-glow inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                <a href="#contact"
+                    class="halo-glow inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105">
                     Get In Touch
                 </a>
             </div>
-            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; 2025 Ostap Lernatovych. All rights reserved.</p>
+            <p class="mt-8 text-center text-base text-gray-400 dark:text-gray-500">&copy; <span
+                    id="copyright-year"></span> Ostap Lernatovych. All
+                rights reserved.</p>
         </div>
     </footer>
 
     <!-- Notification Toast -->
-    <div id="notification" class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
+    <div id="notification"
+        class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
         <p id="notification-message"></p>
     </div>
 
@@ -471,6 +682,12 @@
     <!-- JavaScript for Interactions -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Set copyright year dynamically
+            const yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
             const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -480,7 +697,7 @@
             // Particle configurations
             const lightParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#9ca3af" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#d1d5db", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
             const darkParticlesConfig = { particles: { number: { value: 150, density: { enable: true, value_area: 800 } }, color: { value: "#4b5563" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#374151", opacity: 0.4, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
-            
+
             function initParticles(isDark) {
                 const config = isDark ? darkParticlesConfig : lightParticlesConfig;
                 const particlesDiv = document.getElementById('particles-js');
@@ -519,16 +736,16 @@
             };
 
             // Add event listeners for theme toggles
-            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
-            if(themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
-            
+            if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
             // Mobile menu toggle
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const hamburgerIcon = document.getElementById('hamburger-icon');
             const closeIcon = document.getElementById('close-icon');
 
-            if(menuButton) {
+            if (menuButton) {
                 menuButton.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
                     hamburgerIcon.classList.toggle('hidden');
@@ -537,9 +754,9 @@
             }
 
             // Close mobile menu on link click
-            if(mobileMenu) {
+            if (mobileMenu) {
                 mobileMenu.addEventListener('click', (event) => {
-                    if(event.target.tagName === 'A') {
+                    if (event.target.tagName === 'A') {
                         mobileMenu.classList.add('hidden');
                         hamburgerIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
@@ -604,7 +821,7 @@
             if (contactForm) {
                 contactForm.addEventListener('submit', (event) => {
                     event.preventDefault();
-                    
+
                     submitButton.disabled = true;
                     submitButton.textContent = 'Sending...';
 
@@ -646,5 +863,55 @@
             }
         });
     </script>
+
+    <!-- Google Calendar Appointment Scheduling -->
+    <!-- Hidden container for Google's auto-generated button -->
+    <div id="google-calendar-container" class="hidden">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function () {
+                var target = document.currentScript;
+                window.addEventListener('load', function () {
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0U7AqFqsWgTwzSpBGV8V2VvwkoJP-LiKPThVd0_70If2CGUiQxRaEHZLc5YGP9mqUk6VDH-qsN?gv=true',
+                        color: '#039BE5',
+                        label: 'Free Consultation',
+                        target,
+                    });
+                });
+            })();
+        </script>
+    </div>
+
+    <!-- Custom styled button -->
+    <button id="custom-consultation-btn"
+        class="fixed bottom-6 right-6 z-[100] inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>Free Consultation</span>
+    </button>
+
+    <script>
+        // Trigger the Google Calendar modal when custom button is clicked
+        document.addEventListener('DOMContentLoaded', function () {
+            const customBtn = document.getElementById('custom-consultation-btn');
+
+            customBtn.addEventListener('click', function () {
+                // Find the Google-generated button and click it
+                const googleBtn = document.querySelector('#google-calendar-container button');
+                if (googleBtn) {
+                    googleBtn.click();
+                } else {
+                    // Fallback: wait a bit for the button to be generated
+                    setTimeout(function () {
+                        const googleBtnRetry = document.querySelector('#google-calendar-container button');
+                        if (googleBtnRetry) {
+                            googleBtnRetry.click();
+                        }
+                    }, 500);
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
