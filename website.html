@@ -31,8 +31,11 @@
     <!-- Google Fonts -->
 
     <link rel="stylesheet" href="website/css/styles.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="website/css/fontawesome.min.css">
+    <!-- Font Awesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="website/css/fontawesome.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="website/css/fontawesome.min.css">
+    </noscript>
     <!-- Google Calendar Appointment Scheduling -->
     <link rel="preconnect" href="https://calendar.google.com">
     <link rel="preload" href="https://calendar.google.com/calendar/scheduling-button-script.js" as="script">
@@ -371,7 +374,7 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/berg-dental.webp" alt="Screenshot of the Berg Dental website."
-                            class="portfolio-scroll-image">
+                            class="portfolio-scroll-image" loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Berg Dental DMD</h3>
@@ -387,7 +390,8 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/pita-my-shawarma.webp"
-                            alt="Screenshot of the Pita My Shawarma website." class="portfolio-scroll-image">
+                            alt="Screenshot of the Pita My Shawarma website." class="portfolio-scroll-image"
+                            loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pita My Shawarma</h3>
@@ -403,7 +407,7 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/pittua.webp" alt="Screenshot of the Pittua.com website."
-                            class="portfolio-scroll-image">
+                            class="portfolio-scroll-image" loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pittua</h3>
@@ -419,7 +423,8 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/handyman-manlius.webp"
-                            alt="Screenshot of the Handyman Manlius website." class="portfolio-scroll-image">
+                            alt="Screenshot of the Handyman Manlius website." class="portfolio-scroll-image"
+                            loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
@@ -435,7 +440,8 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/farmers-burger.webp"
-                            alt="Screenshot of The Farmers Burger website." class="portfolio-scroll-image">
+                            alt="Screenshot of The Farmers Burger website." class="portfolio-scroll-image"
+                            loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">The Farmers Burger</h3>
@@ -451,7 +457,8 @@
                     class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/rays-insulation.webp"
-                            alt="Screenshot of Ray's Insulation website." class="portfolio-scroll-image">
+                            alt="Screenshot of Ray's Insulation website." class="portfolio-scroll-image" loading="lazy"
+                            width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ray's Insulation</h3>
@@ -468,7 +475,8 @@
                     class="hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
                     <div class="portfolio-scroll-container">
                         <img src="website/img/portfolio/blackstone-clt.webp"
-                            alt="Screenshot of BlackStone Construction website." class="portfolio-scroll-image">
+                            alt="Screenshot of BlackStone Construction website." class="portfolio-scroll-image"
+                            loading="lazy" width="400" height="800">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">BlackStone Construction & Design
@@ -509,7 +517,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1 text-center">
                         <img src="website/img/profilepicture.webp" alt="Profile Picture of Ostap Lernatovych"
-                            class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
+                            class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" width="160" height="160"
+                            loading="lazy"
                             onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
                     </div>
                     <div class="md:col-span-2">

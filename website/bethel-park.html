@@ -24,9 +24,13 @@
     <meta name="twitter:image" content="https://ost4p.com/profilepicture.jpg">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind_output.css">
-    
-    
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+
+    <!-- Font Awesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+    </noscript>
     <!-- Shared Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -85,7 +89,8 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/3">
                     <img src="img/profilepicture.webp" alt="Ostap Lernatovych"
-                        class="rounded-2xl shadow-xl w-64 h-64 object-cover mx-auto halo-glow">
+                        class="rounded-2xl shadow-xl w-64 h-64 object-cover mx-auto halo-glow" width="256" height="256"
+                        loading="lazy">
                 </div>
                 <div class="md:w-2/3">
                     <h2 class="text-3xl font-bold mb-6">About Me</h2>
@@ -206,9 +211,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
