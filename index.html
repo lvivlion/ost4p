@@ -728,17 +728,17 @@
             const setTheme = (isDark) => {
                 if (isDark) {
                     document.documentElement.classList.add('dark');
-                    themeToggleLightIcon.classList.add('hidden');
-                    themeToggleDarkIcon.classList.remove('hidden');
-                    themeToggleLightIconMobile.classList.add('hidden');
-                    themeToggleDarkIconMobile.classList.remove('hidden');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    themeToggleLightIcon.classList.remove('hidden');
+                    themeToggleLightIcon.classList.remove('hidden'); // Sun icon
                     themeToggleDarkIcon.classList.add('hidden');
                     themeToggleLightIconMobile.classList.remove('hidden');
                     themeToggleDarkIconMobile.classList.add('hidden');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    themeToggleLightIcon.classList.add('hidden');
+                    themeToggleDarkIcon.classList.remove('hidden'); // Moon icon
+                    themeToggleLightIconMobile.classList.add('hidden');
+                    themeToggleDarkIconMobile.classList.remove('hidden');
                     localStorage.setItem('color-theme', 'light');
                 }
                 // Re-initialize particles with the correct theme after setting the theme

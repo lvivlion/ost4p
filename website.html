@@ -35,7 +35,7 @@
         }
     </script>
     <!-- Google Fonts -->
-    
+
     <link rel="stylesheet" href="website/css/styles.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="website/css/fontawesome.min.css">
@@ -659,12 +659,12 @@
                 }
             }
 
-            // Function to update icon visibility
+            // Function to update icon visibility - Reversed: Moon for Light, Sun for Dark
             const updateIcons = (isDark) => {
-                if (darkIcon) darkIcon.classList.toggle('hidden', !isDark);
-                if (lightIcon) lightIcon.classList.toggle('hidden', isDark);
-                if (darkIconMobile) darkIconMobile.classList.toggle('hidden', !isDark);
-                if (lightIconMobile) lightIconMobile.classList.toggle('hidden', isDark);
+                if (darkIcon) darkIcon.classList.toggle('hidden', isDark);
+                if (lightIcon) lightIcon.classList.toggle('hidden', !isDark);
+                if (darkIconMobile) darkIconMobile.classList.toggle('hidden', isDark);
+                if (lightIconMobile) lightIconMobile.classList.toggle('hidden', !isDark);
             };
 
             // Function to set the theme
