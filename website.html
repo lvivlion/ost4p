@@ -14,10 +14,20 @@
     <meta property="og:url" content="https://ost4p.com/website">
     <meta property="og:image" content="https://ost4p.com/profilepicture.jpg"> <!-- Consider a business logo here -->
     <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OL Website Services & Tech Help | Pittsburgh">
+    <meta name="twitter:description"
+        content="Professional website design, development, and tech help services in the Pittsburgh Metro area. Over 10 years of experience.">
+    <meta name="twitter:image" content="https://ost4p.com/profilepicture.jpg">
+    <!-- Additional SEO -->
+    <meta name="keywords"
+        content="Pittsburgh web design, website development Pittsburgh PA, local SEO Pittsburgh, web designer near me, small business websites, tech support Pittsburgh">
+    <link rel="canonical" href="https://ost4p.com/website.html">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="website/css/tailwind.min.js"></script>
     <script>
         // Set up Tailwind dark mode
         tailwind.config = {
@@ -25,12 +35,10 @@
         }
     </script>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="website/css/inter.css">
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="website/css/fontawesome.min.css">
     <!-- Google Calendar Appointment Scheduling -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 
@@ -167,6 +175,38 @@
         .Xfsokf {
             z-index: 10000 !important;
             position: fixed !important;
+        }
+
+        /* Portfolio hover-scroll effect */
+        .portfolio-scroll-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .dark .portfolio-scroll-container {
+            background-color: #1f2937;
+        }
+
+        .portfolio-scroll-container,
+        .portfolio-scroll-container img {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .portfolio-scroll-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            transition: top 2.5s ease-in-out;
+        }
+
+        .portfolio-scroll-container:hover .portfolio-scroll-image {
+            top: calc(-100% + 250px);
         }
     </style>
 </head>
@@ -332,104 +372,115 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Project Card 1 -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/e0e7ff/4f46e5?text=Berg+Dental"
-                        alt="Screenshot of the Berg Dental website." class="w-full h-auto object-cover">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/berg-dental.webp" alt="Screenshot of the Berg Dental website."
+                            class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Berg Dental DMD</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A modern, patient-focused website for a local
                             dental practice to increase bookings and online visibility.</p>
                         <a href="https://bergdentaldmd.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 2 -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fff7ed/f97316?text=Pita+My+Shawarma"
-                        alt="Screenshot of the Pita My Shawarma website." class="w-full h-auto object-cover">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/pita-my-shawarma.webp"
+                            alt="Screenshot of the Pita My Shawarma website." class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pita My Shawarma</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">An engaging website for a popular street food
                             vendor, featuring menus and location information.</p>
                         <a href="https://pitamyshawarma.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 3 -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/dbeafe/1e40af?text=Pittua.com"
-                        alt="Screenshot of the Pittua.com website." class="w-full h-auto object-cover"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/pittua.webp" alt="Screenshot of the Pittua.com website."
+                            class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pittua
-                        </h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pittua</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A dedicated platform for a podcast, designed to
                             feature episodes and connect with a global audience.</p>
                         <a href="https://pittua.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 4 -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Manlius"
-                        alt="Screenshot of the Handyman Manlius website." class="w-full h-auto object-cover"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e7ff/4f46e5?text=Image+Not+Found'">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/handyman-manlius.webp"
+                            alt="Screenshot of the Handyman Manlius website." class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Handyman Manlius</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">A professional landing page for a construction
                             company to generate leads and showcase their services.</p>
                         <a href="https://handymanmanlius.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 5: The Farmers Burger -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/f3e8ff/7c3aed?text=The+Farmers+Burger"
-                        alt="Screenshot of The Farmers Burger website." class="w-full h-auto object-cover">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/farmers-burger.webp"
+                            alt="Screenshot of The Farmers Burger website." class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">The Farmers Burger</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">Pittsburgh's healthiest food truck featuring
                             pasture-raised smash burgers with transparent sourcing and event booking.</p>
                         <a href="https://thefarmersburger.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 6: Ray's Insulation -->
                 <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/fee2e2/dc2626?text=Rays+Insulation"
-                        alt="Screenshot of Ray's Insulation website." class="w-full h-auto object-cover">
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/rays-insulation.webp"
+                            alt="Screenshot of Ray's Insulation website." class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ray's Insulation</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">19+ years of trusted insulation services in
                             Pittsburgh with a 4.9★ rating. Professional site showcasing services and customer reviews.
                         </p>
                         <a href="https://raysinsulation.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 7: BlackStone Construction -->
                 <div id="portfolio-card-7"
-                    class="hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/800x600/e0f2fe/0369a1?text=BlackStone+Construction"
-                        alt="Screenshot of BlackStone Construction website." class="w-full h-auto object-cover">
+                    class="hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+                    <div class="portfolio-scroll-container">
+                        <img src="website/img/portfolio/blackstone-clt.webp"
+                            alt="Screenshot of BlackStone Construction website." class="portfolio-scroll-image">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white">BlackStone Construction & Design
                         </h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-300">Charlotte remodeling specialists offering
                             bathroom, kitchen, and flooring services with a stunning project gallery.</p>
                         <a href="https://blackstoneclt.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block mt-6 font-semibold text-blue-600 dark:text-blue-400">View Live Site
+                            class="inline-block mt-6 font-semibold text-purple-600 dark:text-purple-400">View Live Site
                             &rarr;</a>
                     </div>
                 </div>
@@ -461,7 +512,7 @@
             <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-md">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1 text-center">
-                        <img src="/profilepicture.jpg" alt="Profile Picture of Ostap Lernatovych"
+                        <img src="website/img/profilepicture.webp" alt="Profile Picture of Ostap Lernatovych"
                             class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
                             onerror="this.onerror=null;this.src='https://placehold.co/160x160/E0E7FF/4F46E5?text=OL';">
                     </div>
@@ -479,81 +530,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Service Areas Section -->
-        <section id="service-areas" class="mb-24 fade-in-section">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Areas We Serve</h2>
-                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                    We provide professional web design and SEO services throughout the Pittsburgh Metropolitan area.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3">
-                <a href="website/pittsburgh.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Pittsburgh</a>
-                <a href="website/cranberry.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Cranberry</a>
-                <a href="website/murrysville.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Murrysville</a>
-                <a href="website/monroeville.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Monroeville</a>
-                <a href="website/wexford.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Wexford</a>
-                <a href="website/moon-township.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Moon</a>
-                <a href="website/bethel-park.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Bethel
-                    Park</a>
-                <a href="website/mt-lebanon.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Mt.
-                    Lebanon</a>
-                <a href="website/robinson.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Robinson</a>
-                <a href="website/south-hills.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">South
-                    Hills</a>
-                <a href="website/carnegie.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Carnegie</a>
-                <a href="website/sewickley.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Sewickley</a>
-                <a href="website/upper-st-clair.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Upper
-                    St. Clair</a>
-                <a href="website/franklin-park.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Franklin
-                    Park</a>
-                <a href="website/mccandless.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">McCandless</a>
-                <a href="website/ross-township.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Ross
-                    Township</a>
-                <a href="website/bridgeville.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Bridgeville</a>
-                <a href="website/oakmont.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Oakmont</a>
-                <a href="website/plum.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Plum</a>
-                <a href="website/hampton.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Hampton</a>
-                <a href="website/west-mifflin.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">West
-                    Mifflin</a>
-                <a href="website/dormont.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Dormont</a>
-                <a href="website/canonsburg.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Canonsburg</a>
-                <a href="website/peters-township.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Peters
-                    Twp</a>
-                <a href="website/greensburg.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Greensburg</a>
-                <a href="website/north-huntingdon.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">N.
-                    Huntingdon</a>
-                <a href="website/beaver.html"
-                    class="flex items-center justify-center p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all text-blue-600 dark:text-blue-400 font-semibold hover:scale-105 text-sm">Beaver</a>
             </div>
         </section>
 
@@ -704,9 +680,8 @@
                 setTheme(!document.documentElement.classList.contains('dark'));
             };
 
-            // Set initial theme on page load
-            const isInitialDark = localStorage.getItem('color-theme') === 'dark' ||
-                (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            // Set initial theme on page load - default to light mode
+            const isInitialDark = localStorage.getItem('color-theme') === 'dark';
             setTheme(isInitialDark);
 
             // Add event listeners

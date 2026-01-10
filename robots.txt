@@ -1,0 +1,6 @@
+# robots.txt for ost4p.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ost4p.com/sitemap.xml
