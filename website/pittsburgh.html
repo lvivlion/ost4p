@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -34,13 +34,16 @@
     <!-- Google Fonts -->
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- Font Awesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/fontawesome.min.css"></noscript>
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <div id="particles-js"></div>
     <!-- Header -->
     <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +93,7 @@
                 <p class="mt-4 max-w-3xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400">
                     We build stunning, high-performance websites for businesses across the Steel City. From Downtown to
                     the Strip District,
-                    Shadyside to the South Sideâ€”we help Pittsburgh businesses succeed online.
+                    Shadyside to the South Side—we help Pittsburgh businesses succeed online.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                     <a href="../website.html#contact"
@@ -110,8 +113,7 @@
             class="mb-24 fade-in-section bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 sm:p-12 rounded-lg shadow-md">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/3">
-                    <img src="img/profilepicture.webp" alt="Ostap Lernatovych"
-                        class="rounded-2xl shadow-xl w-64 h-64 object-cover mx-auto halo-glow">
+                    <img src="img/profilepicture.webp" alt="Ostap Lernatovych" class="rounded-2xl shadow-xl w-64 h-64 object-cover mx-auto halo-glow" width="256" height="256" loading="lazy">
                 </div>
                 <div class="md:w-2/3">
                     <h2 class="text-3xl font-bold mb-6">About Me</h2>
@@ -145,7 +147,7 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4">Why Pittsburgh Businesses Choose Us</h2>
                 <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                    We understand the unique needs of Pittsburgh's diverse business communityâ€”from tech startups in East
+                    We understand the unique needs of Pittsburgh's diverse business community—from tech startups in East
                     Liberty to
                     family-owned shops in Bloomfield.
                 </p>
@@ -209,7 +211,7 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Responsive Development</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Websites that look perfect on every deviceâ€”desktop,
+                        <p class="text-gray-600 dark:text-gray-300">Websites that look perfect on every device—desktop,
                             tablet, and mobile.</p>
                     </div>
                 </div>
@@ -296,27 +298,27 @@
             <div class="flex flex-wrap justify-center gap-3">
                 <a href="cranberry.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Cranberry
                     Township</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="murrysville.html"
                     class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Murrysville</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="monroeville.html"
                     class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Monroeville</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="wexford.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Wexford</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="moon-township.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Moon
                     Township</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="bethel-park.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Bethel
                     Park</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="mt-lebanon.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Mt.
                     Lebanon</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="robinson.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Robinson
                     Township</a>
-                <span class="text-gray-400">â€¢</span>
+                <span class="text-gray-400">•</span>
                 <a href="south-hills.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">South
                     Hills</a>
             </div>
@@ -400,6 +402,28 @@
             }, { threshold: 0.1 });
             sections.forEach(section => observer.observe(section));
         });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const lightParticlesConfig = { particles: { number: { value: 80, density: { enable: true, value_area: 800 } }, color: { value: "#764ba2" }, shape: { type: "circle" }, opacity: { value: 0.3, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#764ba2", opacity: 0.2, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
+        const darkParticlesConfig = { particles: { number: { value: 80, density: { enable: true, value_area: 800 } }, color: { value: "#f093fb" }, shape: { type: "circle" }, opacity: { value: 0.3, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#f093fb", opacity: 0.2, width: 1 }, move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "window", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 140, line_opacity: 1 }, push: { particles_nb: 4 } } }, retina_detect: true };
+        function initParticles(isDark) {
+            if (window.particlesJS) {
+                particlesJS('particles-js', isDark ? darkParticlesConfig : lightParticlesConfig);
+            }
+        }
+        // Initialize particles based on current theme
+        initParticles(document.documentElement.classList.contains('dark'));
+        // Update particles when theme changes (observing mutations on html class)
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    initParticles(document.documentElement.classList.contains('dark'));
+                }
+            });
+        });
+        observer.observe(document.documentElement, { attributes: true });
     </script>
 </body>
 
